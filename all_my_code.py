@@ -1,3 +1,7 @@
+def print_hello_world():
+	print('Приветствую!')
+
+
 def admin_username_pswd():
 	admin_name = 'admin'
 	admin_pswd = 'admin'
@@ -17,9 +21,9 @@ def admin_username_pswd():
 
 
 def list_compreherson():
-	x = input('Введите что хотите, я сделаю список: ')
-	y = [z for z in x]
-	print(y)
+	foo = input('Введите что хотите, я сделаю список: ')
+	bar = [baz for baz in foo]
+	print(bar)
 
 
 
@@ -31,16 +35,28 @@ def e_numerate():
 
 def maxmin():
 	maxmin = input('Найти min() и max(): ')
-	x = maxmin
-	print(f'Минимальное значение введенного равна {min(x)}.')
-	print(f'Максимальное значение введенного равна {max(x)}.')
+	foo = maxmin
+	print(f'Минимальное значение введенного равна {min(foo)}.')
+	print(f'Максимальное значение введенного равна {max(foo)}.')
 
 
 
+def sum_of_two_numbers(foo=0, bar=0):
+	return foo+bar
+baz = (sum_of_two_numbers(1, 2)) 	
+print(f'{baz} посмотри на 44 строку')
 
 
+def ten_percent_with_args(*args):
+	foo = int(input('Введите число и я верну 10% от вашего числа: '))
+	for bar in args:
+		foo = foo * bar
+	print("10% от вашего числа равна: ", foo * 0.1)
 
+
+print_hello_world()
 admin_username_pswd()
 list_compreherson()
 e_numerate()
 maxmin()
+ten_percent_with_args()
